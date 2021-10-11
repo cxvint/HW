@@ -15,11 +15,7 @@ function request(url, callback) {
       return;
     }
     if (xhr.status != 200) {
-<<<<<<< HEAD
       console.log(`${xhr.status} + ': ' + ${xhr.statusText}`);
-=======
-      console.log(xhr.status + ': ' + xhr.statusText);
->>>>>>> 1dbadc8ad962bd56e088298699d6e063cc213317
       return;
     }
 
@@ -36,17 +32,9 @@ request('by-cities.json', (data) => {
 
   input.addEventListener('input', () => {
     сity = input.value[0].toUpperCase() + input.value.slice(1);
-<<<<<<< HEAD
 
     let newArrayCities;
 
-=======
-  });
-
-  let newArrayCities;
-
-  input.addEventListener('input', () => {
->>>>>>> 1dbadc8ad962bd56e088298699d6e063cc213317
     function getArrCities(arrCities) {
       newArrayCities = [];
 
@@ -57,13 +45,6 @@ request('by-cities.json', (data) => {
       }
     }
     getArrCities(data);
-<<<<<<< HEAD
-
-=======
-  });
-
-  input.addEventListener('input', () => {
->>>>>>> 1dbadc8ad962bd56e088298699d6e063cc213317
     incorrectCity.textContent = '';
     select.textContent = '';
 
@@ -117,10 +98,6 @@ function getWeather() {
   request(
     `https://api.openweathermap.org/data/2.5/weather?q=${nameCity}&appid=${apiKey}`,
     (data) => {
-<<<<<<< HEAD
-=======
-      console.log(data);
->>>>>>> 1dbadc8ad962bd56e088298699d6e063cc213317
       weatherTitle.textContent = data.name;
 
       if (data.weather[0].main === 'Clear') {
@@ -130,10 +107,6 @@ function getWeather() {
           weatherImg.src = 'images/clear.png';
         }
       }
-<<<<<<< HEAD
-=======
-      console.log(data.dt);
->>>>>>> 1dbadc8ad962bd56e088298699d6e063cc213317
 
       weatherImg.src = 'images/' + data.weather[0].main.toLowerCase() + '.png';
 
@@ -147,10 +120,7 @@ function getWeather() {
       if ((temp = 0)) {
         weatherTemp.textContent = temp;
       }
-<<<<<<< HEAD
       return;
-=======
->>>>>>> 1dbadc8ad962bd56e088298699d6e063cc213317
     }
   );
 }
