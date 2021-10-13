@@ -70,19 +70,16 @@ request('by-cities.json', (data) => {
   });
 
   select.addEventListener('mouseout', (e) => {
-    target = e.target;
+    let target = e.target;
     target.classList.remove('new-cities');
   });
 
   select.addEventListener('click', (e) => {
-    target = e.target;
-    input.value = target.textContent;
+    const { textContent } = e.target;
+    input.value = textContent;
+
     nameCity = input.value;
     getWeather();
-    select.textContent = ``;
-  });
-
-  main.addEventListener('click', () => {
     select.textContent = ``;
   });
 });
