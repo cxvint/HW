@@ -11,11 +11,11 @@ function request(url, callback) {
   const xhr = new XMLHttpRequest();
   xhr.open('GET', url);
   xhr.addEventListener('readystatechange', (e) => {
-    if (e.target.readyState !== 4) {
+    if (e.target.readyState != 4) {
       return;
     }
     if (xhr.status != 200) {
-      console.log(`${xhr.status} + ': ' + ${xhr.statusText}`);
+      console.log(`${xhr.status}: ${xhr.statusText}`);
       return;
     }
 
@@ -29,11 +29,10 @@ function request(url, callback) {
 
 request('by-cities.json', (data) => {
   let сity;
+  let newArrayCities;
 
   input.addEventListener('input', () => {
     сity = input.value[0].toUpperCase() + input.value.slice(1);
-
-    let newArrayCities;
 
     function getArrCities(arrCities) {
       newArrayCities = [];
