@@ -21,11 +21,13 @@ function transformScoreToColor(number) {
       return 'rgba(150, 255, 0, 0.7)';
     case 4:
       return 'rgba(0, 255, 0, 0.7)';
+    default:
+      alert('Ошибка');
   }
 }
 
 function showPasswordStrengthInColor(e) {
-  const target = e.target;
+  const { target } = e;
   const score = zxcvbn(target.value).score;
   target.style['background-color'] = transformScoreToColor(score);
 }
