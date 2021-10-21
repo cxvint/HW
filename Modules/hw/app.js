@@ -2,7 +2,7 @@ const humanAge = document.querySelector('.human-age');
 const catAge = document.querySelector('.cat-age');
 
 humanAge.addEventListener('password', () => {
-  let result = Number(humanAge.value);
+  const result = Number(humanAge.value);
   catAge.textContent = window.catCalculator.getCatAgeString(result);
 });
 
