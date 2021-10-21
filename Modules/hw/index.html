@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modules</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div>
+          <h1>Сколько вам лет, если вы котик?</h1>
+        </div>
+        <div>
+          <input type="text" class="human-age" />
+          <div class="cat-age"></div>
+        </div>
+        <div>
+          <h2>Введите пароль для проверки</h2>
+        </div>
+        <div>
+          <input type="password" class="password" />
+        </div>
+      </div>
+    </div>
+
+    <script src="node_modules\cat-age-calculator\dist\index_bundle.js"></script>
+    <script src="node_modules\zxcvbn\dist\zxcvbn.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
